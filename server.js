@@ -9,7 +9,7 @@ app.use(express.json());
 
 app.use("/api/v1/reviews", reviews); //v1 not necessary here, but it's good practice to include in case the API has future versions.
 app.use("*", (req, res) => {
-    res.status(404).json({error: "Not found."})
+  res.status(404).json({ error: "Not found." });
 });
 
 export default app;
