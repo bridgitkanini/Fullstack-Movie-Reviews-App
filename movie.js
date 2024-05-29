@@ -1,15 +1,6 @@
-// Check if running in Node.js
-if (typeof window === "undefined") {
-  // Node.js environment
-  const { URL } = require("url");
-  const urlString = process.argv[2] || "http://example.com";
-  const url = new URL(urlString);
-  console.log(url.href);
-} else {
-  // Browser environment
-  const url = new URL(window.location.href);
-  console.log(url.href);
-}
+// Browser environment
+const url = new URL(window.location.href);
+console.log(url.href);
 
 const movieId = url.searchParams.get("id");
 const movieTitle = url.searchParams.get("title");
